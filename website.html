@@ -1,0 +1,875 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!-- Import Google Icon Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <style>
+        .banner {
+        position: relative;
+        }
+        .banner h2 {
+        font-size: 100px;
+        }
+
+        .banner img {
+        margin-top: 10px;
+        width: 100%;
+        }
+        .banner .title {
+        background: black;
+        position: absolute;
+        color: white;
+        top: 20%;
+        right: 100;
+        padding: 30px;
+        border-radius: 300px;
+        border: 4px double white;
+        }
+        body {
+            background-color: black;
+            color: white;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header nav {
+            padding: 5px;
+        }
+        header a.logo {
+        color: white;
+        border: 4px double white;
+        display: inline-block;
+        border-right: 500px;
+        border-radius: 25px;
+        font-size: 69px;
+        }
+        ul li a {
+            font-size: 20px;
+        }
+        div h2.Zeus {
+        color: purple;
+        }
+        div h2.Poseidon {
+        color: #0000FF;
+        }
+        div h2.Hera {
+        color: white;
+        }
+        div h2.Demeter {
+        color: green;
+        }
+        div h2.Aphrodite {
+        color: red;
+        }
+        div h2.Athena {
+        color: gold;
+        }
+        div h2.Artemis {
+        color: rgb(50, 246, 66);
+        }
+        div h2.Apollo {
+        color: lightskyblue;
+        }
+        div h2.Ares {
+        color: black;
+        }
+        div h2.Hephaestus {
+        color: rgb(245, 126, 28);
+        }
+        div h2.Hermes {
+        color: #f6f332;
+        }
+        div h2.Dionysus {
+        color: #cf32f6;
+        }
+        div.Zeus p:hover {
+            background-color: purple;
+        }
+        div.Poseidon p:hover {
+            background-color: #0000FF;
+        }
+        div.Hera p:hover {
+            background-color: white;
+        }
+        div.Demeter p:hover {
+            background-color: green;
+        }
+        div.Aphrodite p:hover {
+            background-color: red;
+        }
+        div.Athena p:hover {
+            background-color: gold;
+        }
+        div.Artemis p:hover {
+            background-color: rgb(50, 246, 66);
+        }
+        div.Apollo p:hover {
+            background-color: lightskyblue;
+        }
+        div.Ares p:hover {
+            background-color: black;
+        }
+        div.Hephaestus p:hover {
+            background-color: rgb(245, 126, 28);
+        }
+        div.Hermes p:hover {
+            background-color: #f6f332;
+        }
+        div.Dionysus p:hover {
+            background-color: #cf32f6;
+        }
+        nav {
+            background-color: white;
+        }
+        nav li a {
+            text-decoration: none;
+            color: white;
+            font-size: 25px;
+        }
+        nav li a:hover {
+        text-decoration: underline;
+        background-color: purple;
+        }
+        img {
+            display: inline-block;
+            max-width: 100%;
+        }
+        footer {
+        background: purple;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        }
+        form input {
+        margin: 20px 0;
+        padding: 10px 20px;
+        font-size: 24px;
+        border: 4px solid white;
+        border-radius: 28px;
+        }
+        form input:focus {
+        border: 4px dashed #4b4b4b;
+        outline: none;
+        }
+        section.join {
+        background: #f4f4f4;
+        text-align: center;
+        padding: 60px 20px;
+        color: #4b4b4b;
+        }
+        @media screen and (max-width: 1400px) {
+        .banner .title h2 {
+            font-size: 40px;
+        }
+        }
+
+        @media screen and (max-width: 960px) {
+        .banner .title h2 {
+            font-size: 28px;
+        }
+        }
+
+        @media screen and (max-width: 700px) {
+        .banner .title {
+            font-size: 20px;
+            position: relative;
+            text-align: center;
+        }
+
+        .banner .title br {
+            display: none;
+        }
+    }
+
+        div.col img {
+            padding: 10px;
+            margin-bottom: -20px;
+        }
+        div.start p {
+            font-size: 20px;
+            padding: 20px;
+        }
+        section.banner h2::selection {
+        background-color: blue;
+        }
+        section.banner span::selection {
+        background-color: blue;
+        }
+        section.banner h2::hover {
+        background-color: blue;
+        }
+        section.banner span::hover {
+        background-color: blue;
+        }
+        .container-button {
+            justify-content: center;
+            align-items: center;
+        }
+        .container-button a {
+            position: relative;
+            width: 150px;
+            height: 60px;
+            display: inline-block;
+            background-color: white;
+            margin: 10px;
+        }
+        .container-button a:before,
+        .container-button a:after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: red;
+            transition: 0.5s;
+        }
+        .container-button a:hover:before {
+            inset: -3px;
+        }
+        .container-button a:hover:after {
+            inset: -3px;
+            filter: blur(10px);
+        }
+        .container-button a:nth-child(1):before,
+        .container-button a:nth-child(1):after {
+            background: linear-gradient(35deg, gold, #0e1538, purple);
+        }
+        .container-button a:nth-child(2):before,
+        .container-button a:nth-child(2):after {
+            background: linear-gradient(135deg, blue, #0e1538, lightskyblue);
+        }
+        .container-button a:nth-child(3):before,
+        .container-button a:nth-child(3):after {
+            background: linear-gradient(35deg, #d400d4, #0e1538, green);
+        }
+        .container-button a:nth-child(4):before,
+        .container-button a:nth-child(4):after {
+            background: linear-gradient(135deg, lightgreen, #0e1538, lightskyblue);
+        }
+        .container-button a:nth-child(5):before,
+        .container-button a:nth-child(5):after {
+            background: linear-gradient(35deg, #d400d4, #0e1538, red);
+        }
+        .container-button a:nth-child(6):before,
+        .container-button a:nth-child(6):after {
+            background: linear-gradient(135deg, gold, #0e1538, white);
+        }
+        .container-button a:nth-child(7):before,
+        .container-button a:nth-child(7):after {
+            background: linear-gradient(35deg, white, #0e1538, rgb(117, 26, 26));
+        }
+        .container-button a:nth-child(8):before,
+        .container-button a:nth-child(8):after {
+            background: linear-gradient(135deg, lightskyblue, #0e1538, gold);
+        }
+        .container-button a:nth-child(9):before,
+        .container-button a:nth-child(9):after {
+            background: linear-gradient(35deg, red, red, red);
+        }
+        .container-button a:nth-child(10):before,
+        .container-button a:nth-child(10):after {
+            background: linear-gradient(135deg, rgb(231, 111, 13), #0e1538, black);
+        }
+        .container-button a:nth-child(11):before,
+        .container-button a:nth-child(11):after {
+            background: linear-gradient(35deg, lightskyblue, #0e1538, rgb(144, 212, 255));
+        }
+        .container-button a:nth-child(12):before,
+        .container-button a:nth-child(12):after {
+            background: linear-gradient(135deg, #cf32f6, #0e1538, red);
+        }
+        .container-button span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0e1538;
+
+
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            color: white;
+            letter-spacing: 2px;
+            border: 1px solid #020516;
+
+
+            overflow: hidden;
+        }
+        .container-button a span:before {
+            content: "";
+            position: absolute;
+            right: 60%;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 100%;
+            height: 100%;
+            transform: skew(25deg);
+        }
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .card {
+            height: 500px;
+            width: 500px;
+            margin: 20px;
+            overflow: hidden;
+        }
+        .img {
+            height: 500px;
+            width: 350px;
+            border-radius: 3px;
+        }
+        .intro {
+            height: 200px;
+            width: 350px;
+            padding: 6px;
+            box-sizing: border-box;
+            position: absolute;
+            background: rgb(27, 27, 27, .5);
+            color: white;
+            transition: 1.5s;
+        }
+        .intro h1 {
+            margin: 10px;
+            font-style: 40px;
+        }
+
+        .intro p {
+            margin: 10px;
+            font-style: 20px;
+        }
+        section div.card p {
+            font-size: 40px;
+        }
+        .card:hover {
+            cursor: pointer;
+        }
+        .card:hover .intro {
+            height: 310px;
+            bottom: 50px;
+            background: black;
+        }
+
+        .card:hover p {
+            opacity: 1;
+            visibility: visible;
+        }
+        .card:hover img {
+            transform: scale(1.1) rotate(-3deg);
+        }
+        section.container {
+            display: flex;
+        }
+        div h1.Zeus {
+            color: red;
+        }
+        div h1.Poseidon {
+            color: #0000FF;
+        }
+        div h1.Hera {
+            color: white;
+        }
+        div h1.Demeter {
+            color: green;
+        }
+        div h1.Aphrodite {
+            color: red;
+        }
+        div h1.Athena {
+            color: gold;
+        }
+        div h1.Apollo {
+            color: lightskyblue;
+        }
+        div h1.Artemis {
+            color: rgb(50, 246, 66);
+        }
+        div h1.Ares {
+            color: black;
+        }
+        div h1.Hephaestus {
+            color: rgb(245, 126, 28);
+        }
+        div h1.Dionysus {
+            color: #cf32f6;
+        }
+        div h1.Hermes {
+            color: #f6f332;
+        }
+        div.col p {
+            font-size: 30px;
+        }
+        header {
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+        }
+    </style>
+    <title>Website</title>
+
+</head>
+
+<body>
+    <header>
+        <nav class="nav-wrapper transparent z-depth-0">
+            <div class="container">
+                <a href="#" class="brand-logo purple-text logo">Greek</a>
+                <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#gods">The Greek Gods</a></li>
+                    <li><a href="#" class="tooltipped btn-floating btn-small purple" data-tooltip="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a></li>
+                    <li><a href="#" class="tooltipped btn-floating btn-small purple" data-tooltip="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a></li>
+                    <li><a href="#" class="tooltipped btn-floating btn-small purple" data-tooltip="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a></li>
+                </ul>
+                <ul class="sidenav purple" id="mobile-menu">
+                    <li><a href="#">The Greek Gods</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="banner">
+        <img src="img/greek.jpg" alt="Greek banner">
+        <div class="title purple-text">
+            <h2>The Twelve <br><span>Olympians</span></h2>
+        </div>
+    </section>
+    <div class="col s12 l6 start" id="gods">
+        <h2 class="purple-text center-align">The Greek Gods & Goddesses</h2>
+        <p class="center-align">At the center of Greek mythology is the pantheon of gods and goddesses who were said to live on Mount Olympus, the highest mountain in Greece. From their lofty perch, they ruled every aspect of human life. Olympian deities looked like men and women (though they could change themselves into animals and other things) and were — as many myths recounted — vulnerable to human foibles and passions...</p>
+    </div>
+    <div class="container-button">
+        <a href="#zeus" class="greek"><span>Zeus</span></a>
+        <a href="#poseidon" class="greek"><span>Poseidon</span></a>
+        <a href="#hera" class="greek"><span>Hera</span></a>
+        <a href="#demeter" class="greek"><span>Demeter</span></a>
+        <a href="#aphrodite" class="greek"><span>Aphrodite</span></a>
+        <a href="#athena" class="greek"><span>Athena</span></a>
+        <a href="#artemis" class="greek"><span>Artemis</span></a>
+        <a href="#apollo" class="greek"><span>Apollo</span></a>
+        <a href="#ares" class="greek"><span>Ares</span></a>
+        <a href="#hephaestus" class="greek"><span>Hephaestus</span></a>
+        <a href="#hermes" class="greek"><span>Hermes</span></a>
+        <a href="#dionysus" class="greek"><span>Dionysus</span></a>
+    </div>
+    <!-- Photos / grid-->
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="img/parallax.jpg" alt="" class="responsive-img">
+        </div>
+    </div>
+    <section>
+        <div class="row zeus" id="zeus">
+            <div class="col s12 l4">
+                <img src="img/zeus.jpg" alt="" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 offset-l1 Zeus">
+                <h2 class="Zeus">Zeus</h2>
+                <p>Zeus is the god of the sky in ancient Greek mythology. As the chief Greek deity, Zeus is considered the ruler, protector, and father of all gods and humans. Zeus is often depicted as an older man with a beard and is represented by symbols such as the lightning bolt and the eagle.</p>
+            </div>
+        </div>
+    </section>
+    <section class="container section scrollspy">
+        <div class="container">
+            <div class="card z-depth-2">
+                <img src="img/pic.jpg" alt="zeus">
+                <div class="intro">
+                    <h1 class="Zeus">Zeus (Jupiter, in Roman mythology)</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card z-depth-2">
+                <img src="img/pic.jpg" alt="zeus">
+                <div class="intro">
+                    <p>The king of all the Gods (and father to many) and God of Weather, Law and Fate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        <div class="row poseidon" id="poseidon">
+            <div class="col s12 l4 push-l7 offset-l1">
+                <img src="img/poseidon.jpg" alt="" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 pull-l5 offset-l1 right-align Poseidon">
+                <h2 class="Poseidon">Poseidon</h2>
+                <p>Poseidon, in ancient Greek religion, god of the sea (and of water generally), earthquakes, and horses. He is distinguished from Pontus, the personification of the sea and the oldest Greek divinity of the waters. The name Poseidon means either “husband of the earth” or “lord of the earth.”</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <section class="container section scrollspy">
+            <div class="container">
+                <div class="card z-depth-2">
+                    <img src="img/pic.jpg" alt="poseidon">
+                    <div class="intro">
+                        <h1 class="Poseidon">Poseidon (Neptune)</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card z-depth-2">
+                    <img src="img/pic.jpg" alt="poseidon">
+                    <div class="intro">
+                        <p>God of the sea</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <section>
+        <div class="row hera" id="hera">
+            <div class="col s12 l4">
+                <img src="img/hera.jpg" alt="" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 offset-l1 Hera">
+                <h2 class="Hera">Hera</h2>
+                <p>In ancient Greek religion, Hera is the goddess of marriage, women and family, and the protector of women during childbirth. She is queen of the twelve Olympians and Mount Olympus, sister and wife of Zeus, and daughter of the Titans Cronus and Rhea. One of her defining characteristics in myth is her jealous and vengeful nature in dealing with any who offend her, especially Zeus' numerous adulterous lovers and illegitimate offspring.</p>
+            </div>
+        </div>
+    </section>
+    <section class="container section scrollspy">
+        <div class="container">
+            <div class="card z-depth-2">
+                <img src="img/pic.jpg" alt="hera">
+                <div class="intro">
+                    <h1 class="Hera">Hera (Juno)</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card z-depth-2">
+                <img src="img/pic.jpg" alt="hera">
+                <div class="intro">
+                    <p>The queen of the Gods and Goddess of women and marriage</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        <div class="row demeter" id="demeter">
+            <div class="col s12 l4 push-l7 offset-l1">
+                <img src="img/demeter.jpg" alt="" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 pull-l5 offset-l1 right-align Demeter">
+                <h2 class="Demeter">Demeter</h2>
+                <p>Demeter was the Ancient Greek goddess of the harvest. She was a very important goddess to Ancient Greek people, who farmed a lot of their food. Demeter had a kind and beautiful daughter, called Persephone, who she loved very much.</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <section class="container section scrollspy">
+            <div class="container">
+                <div class="card z-depth-2">
+                    <img src="img/pic.jpg" alt="demeter">
+                    <div class="intro">
+                        <h1 class="Demeter">Demeter (Ceres)</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card z-depth-2">
+                    <img src="img/pic.jpg" alt="demeter">
+                    <div class="intro">
+                        <p>Goddess of agriculture and grain</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <div class="row aphrodite" id="aphrodite">
+            <div class="col s12 l4">
+                <img src="img/aphrodite.jpg" alt="" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 offset-l1 Aphrodite">
+                <h2 class="Aphrodite">Aphrodite</h2>
+                <p>While best known as Aphrodite, goddess of love, she was the ancient Greek goddess of love, beauty, fertility, physical pleasure (particularly sexual), eternal youth, grace, and beauty. Additionally, she played roles in commerce, war, and politics, and perhaps most notably, as one of the progenitors of the Trojan War.</p>
+            </div>
+        </div>
+    </section>
+        
+    <section>
+        <section class="container section scrollspy">
+            <div class="container">
+                <div class="card z-depth-2">
+                    <img src="img/pic.jpg" alt="aphrodite">
+                    <div class="intro">
+                        <h1 class="Aphrodite">Aphrodite (Venus)</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card z-depth-2">
+                    <img src="img/pic.jpg" alt="aphrodite">
+                    <div class="intro">
+                        <p>Goddess of beauty and love</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="row athena" id="athena">
+            <div class="col s12 l4 push-l7 offset-l1">
+                <img src="img/athena.jpg" alt="" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 pull-l5 offset-l1 right-align Athena">
+                <h2 class="Athena">Athena</h2>
+                <p>Athena was one of the twelve chief Olympian deities and the goddess associated with wisdom, craft, and warfare. In wars—where she was most commonly depicted—Athena embodied cold rationality, tactics, and strategy. Athena's cold logic stood in direct contrast to her brother Ares' rage, violence, and impulsiveness.</p>
+            </div>
+        </div>
+    </section>
+    <section class="container section scrollspy">
+        <div class="container">
+            <div class="card z-depth-2">
+                <img src="img/pic.jpg" alt="zeus">
+                <div class="intro">
+                    <h1 class="Athena">Athena (Minerva)</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card z-depth-2">
+                <img src="img/pic.jpg" alt="athena">
+                <div class="intro">
+                    <p>Goddess of wisdom and defense</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="row artemis" id="artemis">
+            <div class="col s12 l4">
+                <img src="img/artemis.jpg" alt="" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 offset-l1 Artemis">
+                <h2 class="Artemis">Artemis</h2>
+                <p>Artemis was the goddess of chastity, hunting, and the moon, often depicted with her trusty bow and arrow and a short tunic to aid in running through the woods. Her maidenly virtue—for she swore never to marry—was presented in counterpoint to the passionate and fiery Aphrodite.</p>
+            </div>
+        </div>
+    </section>
+    <section class="container section scrollspy">
+        <div class="container">
+            <div class="card z-depth-2">
+                <img src="img/pic.jpg" alt="artemis">
+                <div class="intro">
+                    <h1 class="Artemis">Artemis (Diana)</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card z-depth-2">
+                <img src="img/pic.jpg" alt="artemis">
+                <div class="intro">
+                    <p>Goddess of hunting, animals and childbirth</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        
+        <div class="row apollo" id="apollo">
+            <div class="col s12 l4 push-l7 offset-l1">
+                <img src="img/apollo.jpg" alt="" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 pull-l5 offset-l1 right-align Apollo">
+                <h2 class="Apollo">Apollo</h2>
+                <p>Apollo has been recognized as a god of archery, music and dance, truth and prophecy, healing and diseases, the Sun and light, poetry, and more. One of the most important and complex of the Greek gods, he is the son of Zeus and Leto, and the twin brother of Artemis, goddess of the hunt.</p>
+            </div>
+        </div>
+    </section>
+    <section class="container section scrollspy">
+        <div class="container">
+            <div class="card z-depth-2">
+                <img src="img/pic.jpg" alt="apollo">
+                <div class="intro">
+                    <h1 class="Apollo">Apollo (Apollo)</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card z-depth-2">
+                <img src="img/pic.jpg" alt="apollo">
+                <div class="intro">
+                    <p>God of prophesy, music and poetry and knowledge</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        
+        <div class="row ares" id="ares">
+            <div class="col s12 l4">
+                <img src="img/ares.jpg" alt="" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 offset-l1 Ares">
+                <h2 class="Ares">Ares</h2>
+                <p>Ares was the ancient Greek god of war or, more properly, the spirit of battle. He represented the distasteful aspects of brutal warfare and slaughter. Ares was never very popular, and his worship was not extensive in Greece.</p>
+            </div>
+        </div>
+    </section>
+    <section class="container section scrollspy">
+        <div class="container">
+            <div class="card z-depth-2">
+                <img src="img/pic.jpg" alt="ares">
+                <div class="intro">
+                    <h1 class="Ares">Ares (Mars)</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card z-depth-2">
+                <img src="img/pic.jpg" alt="ares">
+                <div class="intro">
+                    <p>God of war</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        
+        <div class="row hephaestus" id="hephaestus">
+            <div class="col s12 l4 push-l7 offset-l1">
+                <img src="img/hephaestus.jpg" alt="" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 pull-l5 offset-l1 right-align Hephaestus">
+                <h2 class="Hephaestus">Hephaestus</h2>
+                <p>Hephaestus is the Greek god of artisans, blacksmiths, carpenters, craftsmen, fire, metallurgy, metalworking, sculpture and volcanoes. Hephaestus's Roman counterpart is Vulcan. In Greek mythology, Hephaestus was either the son of Zeus and Hera or he was Hera's parthenogenous child.</p>
+            </div>
+        </div>
+    </section>
+    <section class="container section scrollspy">
+        <div class="container">
+            <div class="card z-depth-2">
+                <img src="img/pic.jpg" alt="hephaestus">
+                <div class="intro">
+                    <h1 class="Hephaestus">Hephaestus (Vulcan)</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card z-depth-2">
+                <img src="img/pic.jpg" alt="hephaestus">
+                <div class="intro">
+                    <p>God of fire, metalworking and sculpture</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        
+        <div class="row hermes" id="hermes">
+            <div class="col s12 l4">
+                <img src="img/hermes.jpg" alt="" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 offset-l1 Hermes">
+                <h2 class="Hermes">Hermes</h2>
+                <p>Hermes was the ancient Greek god of trade, wealth, luck, fertility, animal husbandry, sleep, language, thieves, and travel. One of the cleverest and most mischievous of the 12 Olympian gods, Hermes was their herald and messenger.</p>
+            </div>
+        </div>
+    </section>
+    <section class="container section scrollspy">
+        <div class="container">
+            <div class="card z-depth-2">
+                <img src="img/pic.jpg" alt="hermes">
+                <div class="intro">
+                    <h1 class="Hermes">Hermes (Mercury)</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card z-depth-2">
+                <img src="img/pic.jpg" alt="hermes">
+                <div class="intro">
+                    <p>God of travel, hospitality and trade and Zeus’s personal messenger</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        
+        <div class="row dionysus" id="dionysus">
+            <div class="col s12 l4 push-l7 offset-l1">
+                <img src="img/dionysus.jpg" alt="" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 pull-l5 offset-l1 right-align Dionysus">
+                <h2 class="Dionysus">Dionysus</h2>
+                <p>Originally Dionysus was the Greek god of fertility. Later, he came to be known chiefly as the god of wine and pleasure. The Romans called him Bacchus. Dionysus was the son of the supreme god Zeus and Semele, the daughter of a king.</p>
+            </div>
+        </div>
+    </section>
+    <section class="container section scrollspy">
+        <div class="container">
+            <div class="card z-depth-2">
+                <img src="img/pic.jpg" alt="dionysus">
+                <div class="intro">
+                    <h1 class="Dionysus">Dionysus (Bacchus)</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card z-depth-2">
+                <img src="img/pic.jpg" alt="dionysus">
+                <div class="intro">
+                    <p>God of wine, pleasure and festivity</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="img/parallax.jpg" alt="" class="responsive-img">
+        </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="js/materialize.min.js"></script>
+    
+    <script>
+        $('.tooltipped').tooltip();
+        $('.materialboxed').materialbox();
+        $('.parallax').parallax();
+        $('.scrollspy').scrollSpy();
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+        $(document).ready(function () {
+            $('.greek').greek();
+        });
+    </script>
+
+</section>
+    <footer>
+        <p class="copyright">&copy;Copyright 2023 Greek</p>
+    </footer>
+</main>
+<audio autoplay loop">
+<source src="music.mp3">
+Does not support the audio</audio>
+</audio>
+</body>
+
+</html>
